@@ -1,11 +1,14 @@
 // Builds the static site into public/. Run: node build.mjs
-import { mkdirSync, writeFileSync, copyFileSync, readdirSync } from 'node:fs';
+import { mkdirSync, writeFileSync, copyFileSync, readdirSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname } from 'node:path';
 
 const SITE = 'https://managedcomms.uk';
 const PHONE = '01204 954050';
 const TEL = 'tel:+441204954050';
 const YEAR = 2026;
+// Asset URLs change whenever the file changes, so browsers never use a stale copy.
+const v = (f) => createHash('sha256').update(readFileSync(f)).digest('hex').slice(0, 10);
 
 // Buttons stay unlinked until their destinations are agreed. To link one, add href to btn().
 const btn = (label) => `<a class="btn">${label}</a>`;
@@ -48,8 +51,8 @@ const page = ({ path, title, description, body }) => `<!doctype html>
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
-<script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=${v('src/site.css')}">
+<script src="/assets/site.js?v=${v('src/site.js')}" defer></script>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap bar">
