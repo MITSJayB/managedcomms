@@ -1,0 +1,60 @@
+:root{--ink:#22242b;--muted:#565a66;--violet:#4539c9;--violet-dark:#352b9e;--tint:#f4f3fd;--line:#dfddf3;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font:400 1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--violet)}a:hover{color:var(--violet-dark)}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 14px;z-index:5}.skip:focus{left:8px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.narrow{max-width:780px}
+h1,h2,h3{line-height:1.15;font-weight:650;letter-spacing:-.015em;margin:0 0 .6em}
+h1{font-size:clamp(2.25rem,5.5vw,3.75rem)}
+h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+h2:not(:first-child){margin-top:1.6em}
+h3{font-size:1.25rem;margin-top:1.4em}
+p{margin:0 0 1em}
+.site-header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:3}
+.bar{display:flex;align-items:center;gap:28px;min-height:84px;flex-wrap:wrap;padding-block:10px}
+.logo img{width:300px}
+nav{margin-left:auto}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:10px 12px;color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover,nav a[aria-current]{color:var(--violet)}
+nav a[aria-current]{box-shadow:inset 0 -2px var(--violet)}
+.header-phone{font-weight:650;text-decoration:none;white-space:nowrap}
+.hero{padding:clamp(56px,9vw,112px) 0;background:var(--tint)}
+.eyebrow{color:var(--violet);font-weight:600;margin-bottom:.8em}
+.lead{font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.5;color:var(--muted)}
+.actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:1.6em 0 0}
+.btn{display:inline-block;min-height:48px;padding:12px 24px;background:var(--violet);color:#fff;font-weight:600;border-radius:10px}
+.or{color:var(--muted)}
+.notice{background:var(--violet-dark);color:#fff;padding:16px 0}.notice p{margin:0}.notice a{color:#fff}
+.band{padding:clamp(48px,7vw,80px) 0}.tint{background:var(--tint)}
+.intro{max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 40px;margin-top:12px}
+.grid h3{margin-top:1em;margin-bottom:.35em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{display:block;padding:28px;border:1px solid var(--line);border-radius:14px;color:var(--ink);text-decoration:none}
+.card:hover{border-color:var(--violet);color:var(--ink)}
+.card h3{margin-top:0}.card span{color:var(--violet);font-weight:600}
+.scroll{overflow-x:auto;margin-bottom:1.4em}
+table{width:100%;min-width:520px;border-collapse:collapse;background:#fff}
+th,td{padding:14px 16px;border:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--violet);color:#fff;border-color:var(--violet);font-weight:600}
+tbody th{font-weight:600}
+.ticks,ol{padding-left:1.3em}.ticks li,ol li{margin-bottom:.5em}
+.ticks li::marker{color:var(--violet)}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.1rem}
+details p{margin:.7em 0 0;color:var(--muted)}
+.cta{background:var(--violet-dark);color:#fff;padding:clamp(48px,7vw,80px) 0}
+.cta a:not(.btn){color:#fff}.cta .btn{background:#fff;color:var(--violet-dark)}.cta .or{color:#e7e5fb}
+.site-footer{background:var(--tint);padding:48px 0 20px}
+.foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.foot h2{font-size:1rem;margin:0 0 .5em}
+.foot ul{list-style:none;padding:0;margin:0}.foot li{margin-bottom:.35em;overflow-wrap:anywhere}
+.foot img{margin-bottom:10px}
+.legal{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.legal p{margin:0}
+@media (max-width:760px){.site-header{position:static}.bar{gap:6px 16px}.logo img{width:240px}nav{margin-left:0;order:3;width:100%}nav a{padding:8px 10px 8px 0;margin-right:8px}.header-phone{margin-left:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
