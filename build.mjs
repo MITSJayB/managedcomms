@@ -64,7 +64,7 @@ const page = ({ path, title, description, body }) => `<!doctype html>
 <footer class="site-footer"><div class="wrap foot">
 <div><img src="/assets/managed-comms-icon.png" width="84" height="56" alt=""><p><strong>Managed Comms</strong><br>Business mobiles, connectivity and VoIP.</p></div>
 <div><h2>Services</h2><ul>${nav.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join('')}</ul></div>
-<div><h2>Contact</h2><ul><li><a href="${TEL}">${PHONE}</a></li><li>WhatsApp: <a href="https://wa.me/447396037987">07396 037987</a></li><li><a href="mailto:hello@managedtechnologygroup.com">hello@managedtechnologygroup.com</a></li></ul></div>
+<div><h2>Contact</h2><ul><li><a href="${TEL}">${PHONE}</a></li><li>WhatsApp: <a href="https://wa.me/447396037987?text=Hi%20Managed%20Comms%2C%20I%20have%20an%20enquiry.">07396 037987</a></li><li><a href="mailto:hello@managedtechnologygroup.com">hello@managedtechnologygroup.com</a></li></ul></div>
 </div><div class="wrap legal"><p>&copy; ${YEAR} Managed Technology Group Limited. Registered address: St. Peter&rsquo;s House, Silverwell Street, Bolton, BL1 1PP.</p></div></footer>
 </body></html>
 `;
